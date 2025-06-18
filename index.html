@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billel - Frontend Developer</title>
+    <meta name="description" content="Frontend Developer specializing in modern web experiences with React, TypeScript, and creative animations">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Spline Viewer -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.11/build/spline-viewer.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-text">Billel</span>
+            </a>
+            
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-controls">
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span>👋 Hello, I'm</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="title-line">Billel</span>
+                    <span class="title-line">Fullstack Developer</span>
+                </h1>
+                
+                <p class="hero-description">
+                    I build accessible, pixel-perfect digital experiences for the web. 
+                    Specializing in modern Next.js applications & Wordpress with smooth animations and 
+                    thoughtful user interfaces.
+                </p>
+                
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary magnetic">
+                        <span>View My Work</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14"></path>
+                            <path d="m12 5 7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary magnetic">
+                        <span>Get In Touch</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="hero-image">
+                    <spline-viewer url="https://prod.spline.design/pVF4Ns2HGj-vWrCK/scene.splinecode" class="hero-3d-canvas"></spline-viewer>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-bg-decor"></div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-avatar animate-avatar">
+                        <img src="assets/proprofile.jpeg" alt="Billel Avatar" />
+                    </div>
+                    <p class="about-paragraph animate-about"><span class="highlight">Passionate</span> fullstack developer with a love for creating <span class="highlight">beautiful</span>, functional, and accessible web experiences. My journey in web development started with curiosity and has evolved into a deep appreciation for the intersection of <span class="highlight">design</span> and <span class="highlight">technology</span>.</p>
+                    <p class="about-paragraph animate-about">Currently, I focus on building modern <span class="highlight">Next.js</span> applications, <span class="highlight">WordPress</span> sites, and crafting smooth animations with <span class="highlight">GSAP</span> & <span class="highlight">Framer Motion</span>. Every project I take on meets the highest standards of <span class="highlight">performance</span> and <span class="highlight">accessibility</span>.</p>
+                    <p class="about-paragraph animate-about">When I'm not coding, you'll find me exploring new technologies, contributing to <span class="highlight">open-source</span> projects, or sharing knowledge with the <span class="highlight">developer community</span>.</p>
+                </div>
+                <div class="about-stats animate-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="3">3</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="50">15</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="100">100%</span>
+                        <span class="stat-label">Client Satisfaction</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">WordPress Developer</h3>
+                            <span class="timeline-company">Leadcom Agency</span>
+                            <span class="timeline-period">2023 - Present</span>
+                        </div>
+                        <p class="timeline-description">
+                            Lead Wordpress development for enterprise applications, mentoring junior developers, 
+                            and implementing best practices for performance and accessibility.
+                        </p>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Frontend Developer</h3>
+                            <span class="timeline-company">Bluetree</span>
+                            <span class="timeline-period">2021 - 2022</span>
+                        </div>
+                        <p class="timeline-description">
+                            Implemented new features on an existing digital agency website for my client, 
+                            focusing on modern design patterns and smooth user experiences.
+                        </p>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">SCSS</span>
+                            <span class="tech-tag">Figma</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Freelance WordPress Developer</h3>
+                            <span class="timeline-company">Fiverr & Upwork</span>
+                            <span class="timeline-period">2020 - 2023</span>
+                        </div>
+                        <p class="timeline-description">
+                            Collaborated on innovative projects, learned modern development practices, 
+                            and contributed to the growth of early-stage startups.
+                        </p>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">WordPress</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+                                <rect x="10" y="10" width="80" height="60" rx="4" stroke="currentColor" stroke-width="2"/>
+                                <rect x="15" y="20" width="70" height="8" rx="2" fill="currentColor" opacity="0.3"/>
+                                <rect x="15" y="35" width="50" height="8" rx="2" fill="currentColor" opacity="0.3"/>
+                                <rect x="15" y="50" width="40" height="8" rx="2" fill="currentColor" opacity="0.3"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <p class="project-description">
+                            A modern e-commerce platform built with React and Node.js, featuring 
+                            real-time inventory management and seamless payment processing.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Stripe</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Live Demo</a>
+                            <a href="#" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+                                <circle cx="50" cy="30" r="8" fill="currentColor" opacity="0.3"/>
+                                <circle cx="30" cy="60" r="6" fill="currentColor" opacity="0.3"/>
+                                <circle cx="70" cy="60" r="6" fill="currentColor" opacity="0.3"/>
+                                <path d="M30 60 L50 30 L70 60" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Data Visualization Dashboard</h3>
+                        <p class="project-description">
+                            Interactive dashboard for visualizing complex data sets with 
+                            real-time updates and customizable charts and graphs.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">D3.js</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">WebSocket</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Live Demo</a>
+                            <a href="#" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+                                <rect x="20" y="20" width="60" height="60" rx="8" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="35" cy="35" r="3" fill="currentColor"/>
+                                <circle cx="50" cy="35" r="3" fill="currentColor"/>
+                                <circle cx="65" cy="35" r="3" fill="currentColor"/>
+                                <rect x="25" y="50" width="50" height="8" rx="4" fill="currentColor" opacity="0.3"/>
+                                <rect x="25" y="65" width="30" height="8" rx="4" fill="currentColor" opacity="0.3"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Task Management App</h3>
+                        <p class="project-description">
+                            A collaborative task management application with real-time updates, 
+                            team collaboration features, and intuitive drag-and-drop interface.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Framer Motion</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Live Demo</a>
+                            <a href="#" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Frontend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">React</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">TypeScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Next.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">CSS/SCSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Animation & UX</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">GSAP</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Framer Motion</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Three.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Accessibility</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Tools & Others</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Git</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Figma</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Testing</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 class="contact-subtitle">Let's work together</h3>
+                    <p class="contact-description">
+                        I'm always interested in new opportunities and exciting projects. 
+                        Whether you have a question or just want to say hi, feel free to reach out!
+                    </p>
+                    
+                    <div class="contact-methods">
+                        <a href="mailto:hello@billel.dev" class="contact-method">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>hello@billel.dev</span>
+                        </a>
+                        
+                        <a href="https://github.com/billel" class="contact-method">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            <span>GitHub</span>
+                        </a>
+                        
+                        <a href="https://linkedin.com/in/billel" class="contact-method">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" id="subject" name="subject" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary magnetic">
+                        <span>Send Message</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22,2 15,22 11,13 2,9 22,2"></polygon>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    © 2024 Billel. Built with ❤️ and lots of ☕
+                </p>
+                
+                <div class="footer-links">
+                    <a href="#home" class="footer-link">Home</a>
+                    <a href="#about" class="footer-link">About</a>
+                    <a href="#projects" class="footer-link">Projects</a>
+                    <a href="#contact" class="footer-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html> 
