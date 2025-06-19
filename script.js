@@ -713,4 +713,162 @@ if (!('scrollBehavior' in document.documentElement.style)) {
     const script = document.createElement('script');
     script.src = 'https://cdn.jsdelivr.net/npm/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js';
     document.head.appendChild(script);
-} 
+}
+
+// Enhanced tech icon interactions
+document.addEventListener('DOMContentLoaded', function() {
+    // Add click animations to tech icons
+    const techIcons = document.querySelectorAll('.tech-icon');
+    
+    techIcons.forEach(icon => {
+        icon.addEventListener('click', function() {
+            // Create ripple effect
+            const ripple = document.createElement('div');
+            ripple.style.position = 'absolute';
+            ripple.style.borderRadius = '50%';
+            ripple.style.background = 'rgba(255, 255, 255, 0.3)';
+            ripple.style.transform = 'scale(0)';
+            ripple.style.animation = 'ripple 0.6s linear';
+            ripple.style.left = '50%';
+            ripple.style.top = '50%';
+            ripple.style.width = '100px';
+            ripple.style.height = '100px';
+            ripple.style.marginLeft = '-50px';
+            ripple.style.marginTop = '-50px';
+            ripple.style.pointerEvents = 'none';
+            
+            this.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+        
+        // Add hover sound effect (optional)
+        icon.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-8px) scale(1.15) rotate(5deg)';
+        });
+        
+        icon.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1) rotate(0deg)';
+        });
+    });
+    
+    // Add staggered animation to skills items with scrambled timing
+    const skillItems = document.querySelectorAll('.skill-item');
+    
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const skillObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                // Random delay for scrambled appearance
+                const randomDelay = Math.random() * 1000;
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }, randomDelay);
+            }
+        });
+    }, observerOptions);
+    
+    skillItems.forEach((item, index) => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(30px)';
+        item.style.transition = 'all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+        
+        // Add random initial rotation for more scrambled effect
+        const randomRotation = (Math.random() - 0.5) * 20;
+        item.style.transform = `translateY(30px) rotate(${randomRotation}deg)`;
+        
+        skillObserver.observe(item);
+    });
+    
+    // Add parallax effect to skill items
+    skillItems.forEach(item => {
+        item.addEventListener('mousemove', function(e) {
+            const rect = this.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 15;
+            const rotateY = (centerX - x) / 15;
+            
+            this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px) scale(1.08)`;
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            this.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0) scale(1)';
+        });
+    });
+    
+    // Add progress indicator animation
+    const progressBars = document.querySelectorAll('.skill-progress');
+    
+    progressBars.forEach(bar => {
+        const progress = bar.getAttribute('data-progress');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    bar.style.width = progress + '%';
+                }
+            });
+        });
+        
+        observer.observe(bar);
+    });
+    
+    // Add random bounce effect on page load
+    setTimeout(() => {
+        skillItems.forEach((item, index) => {
+            setTimeout(() => {
+                item.style.animation = 'skillBounce 0.8s ease-out';
+                setTimeout(() => {
+                    item.style.animation = '';
+                }, 800);
+            }, index * 100);
+        });
+    }, 1000);
+});
+
+// Add CSS for ripple animation and bounce effect
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes ripple {
+        to {
+            transform: scale(4);
+            opacity: 0;
+        }
+    }
+    
+    @keyframes skillBounce {
+        0% { transform: translateY(0px) scale(1); }
+        50% { transform: translateY(-20px) scale(1.1); }
+        100% { transform: translateY(0px) scale(1); }
+    }
+    
+    .tech-icon {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .skill-item {
+        cursor: pointer;
+    }
+    
+    .skill-item:hover {
+        z-index: 10;
+    }
+    
+    /* Random initial positions for scrambled effect */
+    .skill-item:nth-child(3n+1) { animation-delay: 0.2s; }
+    .skill-item:nth-child(3n+2) { animation-delay: 0.8s; }
+    .skill-item:nth-child(3n+3) { animation-delay: 1.4s; }
+`;
+document.head.appendChild(style); 

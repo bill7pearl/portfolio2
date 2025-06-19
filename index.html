@@ -14,6 +14,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Devicon for coding icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -169,10 +172,18 @@
                             and implementing best practices for performance and accessibility.
                         </p>
                         <div class="timeline-tech">
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
+                            <div class="tech-icon" data-tech="html" data-tooltip="HTML">
+                                <i class="devicon-html5-plain"></i>
+                            </div>
+                            <div class="tech-icon" data-tech="css" data-tooltip="CSS">
+                                <i class="devicon-css3-plain"></i>
+                            </div>
+                            <div class="tech-icon" data-tech="javascript" data-tooltip="JavaScript">
+                                <i class="devicon-javascript-plain"></i>
+                            </div>
+                            <div class="tech-icon" data-tech="wordpress" data-tooltip="WordPress">
+                                <i class="devicon-wordpress-plain"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -189,10 +200,15 @@
                             focusing on modern design patterns and smooth user experiences.
                         </p>
                         <div class="timeline-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">SCSS</span>
-                            <span class="tech-tag">Figma</span>
+                            <div class="tech-icon" data-tech="react" data-tooltip="React">
+                                <i class="devicon-react-original"></i>
+                            </div>
+                            <div class="tech-icon" data-tech="scss" data-tooltip="SCSS">
+                                <i class="devicon-sass-original"></i>
+                            </div>
+                            <div class="tech-icon" data-tech="figma" data-tooltip="Figma">
+                                <i class="devicon-figma-plain"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -209,10 +225,18 @@
                             and contributed to the growth of early-stage startups.
                         </p>
                         <div class="timeline-tech">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">WordPress</span>
+                            <div class="tech-icon" data-tech="html" data-tooltip="HTML">
+                                <i class="devicon-html5-plain"></i>
+                            </div>
+                            <div class="tech-icon" data-tech="css" data-tooltip="CSS">
+                                <i class="devicon-css3-plain"></i>
+                            </div>
+                            <div class="tech-icon" data-tech="javascript" data-tooltip="JavaScript">
+                                <i class="devicon-javascript-plain"></i>
+                            </div>
+                            <div class="tech-icon" data-tech="wordpress" data-tooltip="WordPress">
+                                <i class="devicon-wordpress-plain"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -231,92 +255,81 @@
             <div class="projects-grid">
                 <article class="project-card">
                     <div class="project-image">
-                        <div class="image-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
-                                <rect x="10" y="10" width="80" height="60" rx="4" stroke="currentColor" stroke-width="2"/>
-                                <rect x="15" y="20" width="70" height="8" rx="2" fill="currentColor" opacity="0.3"/>
-                                <rect x="15" y="35" width="50" height="8" rx="2" fill="currentColor" opacity="0.3"/>
-                                <rect x="15" y="50" width="40" height="8" rx="2" fill="currentColor" opacity="0.3"/>
-                            </svg>
-                        </div>
+                        <img src="assets/isabel.png" alt="isabel project screenshot" class="project-img" />
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <h3 class="project-title">isabel</h3>
                         <p class="project-description">
-                            A modern e-commerce platform built with React and Node.js, featuring 
-                            real-time inventory management and seamless payment processing.
+                            A modern enterprise website built with WordPress from a custom Figma design.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Stripe</span>
+                            <div class="tech-icon" data-tech="wordpress" data-tooltip="WordPress">
+                                <i class="devicon-wordpress-plain"></i>
+                            </div>
+                            <div class="tech-icon" data-tech="php" data-tooltip="PHP">
+                                <i class="devicon-php-plain"></i>
+                            </div>
+                            <div class="tech-icon" data-tech="javascript" data-tooltip="JavaScript">
+                                <i class="devicon-javascript-plain"></i>
+                            </div>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">Live Demo</a>
-                            <a href="#" class="project-link">GitHub</a>
+                            <a href="https://cogeat.com/isabel/" class="project-link" target="_blank" rel="noopener noreferrer">See Live</a>
                         </div>
                     </div>
                 </article>
                 
                 <article class="project-card">
                     <div class="project-image">
-                        <div class="image-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
-                                <circle cx="50" cy="30" r="8" fill="currentColor" opacity="0.3"/>
-                                <circle cx="30" cy="60" r="6" fill="currentColor" opacity="0.3"/>
-                                <circle cx="70" cy="60" r="6" fill="currentColor" opacity="0.3"/>
-                                <path d="M30 60 L50 30 L70 60" stroke="currentColor" stroke-width="2" fill="none"/>
-                            </svg>
-                        </div>
+                        <img src="assets/bluetree.png" alt="Bluetree project screenshot" class="project-img" />
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Data Visualization Dashboard</h3>
+                        <h3 class="project-title">Digital Agency</h3>
                         <p class="project-description">
-                            Interactive dashboard for visualizing complex data sets with 
-                            real-time updates and customizable charts and graphs.
+                            Digital agency website built with React and Prismic.io from a custom Figma design.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">D3.js</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">WebSocket</span>
+                            <div class="tech-icon" data-tech="react" data-tooltip="React">
+                                <i class="devicon-react-original"></i>
+                            </div>
+                            <div class="tech-icon" data-tech="prismic" data-tooltip="Prismic.io">
+                                <i class="devicon-javascript-plain"></i>
+                            </div>
+                            <div class="tech-icon" data-tech="javascript" data-tooltip="JavaScript">
+                                <i class="devicon-javascript-plain"></i>
+                            </div>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">Live Demo</a>
-                            <a href="#" class="project-link">GitHub</a>
+                            <a href="https://bluetreedigital.ca/" class="project-link" target="_blank" rel="noopener noreferrer">See Live</a>
                         </div>
                     </div>
                 </article>
                 
                 <article class="project-card">
                     <div class="project-image">
-                        <div class="image-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
-                                <rect x="20" y="20" width="60" height="60" rx="8" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="35" cy="35" r="3" fill="currentColor"/>
-                                <circle cx="50" cy="35" r="3" fill="currentColor"/>
-                                <circle cx="65" cy="35" r="3" fill="currentColor"/>
-                                <rect x="25" y="50" width="50" height="8" rx="4" fill="currentColor" opacity="0.3"/>
-                                <rect x="25" y="65" width="30" height="8" rx="4" fill="currentColor" opacity="0.3"/>
-                            </svg>
-                        </div>
+                        <img src="assets/dentina.png" alt="Dentina project screenshot" class="project-img" />
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Task Management App</h3>
+                        <h3 class="project-title">Dentist Ecommerce</h3>
                         <p class="project-description">
-                            A collaborative task management application with real-time updates, 
-                            team collaboration features, and intuitive drag-and-drop interface.
+                            A local dentist ecommerce website built with WordPress from a custom Adobe XD design.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Firebase</span>
-                            <span class="tech-tag">Framer Motion</span>
-                            <span class="tech-tag">Tailwind CSS</span>
+                            <div class="tech-icon" data-tech="wordpress" data-tooltip="WordPress">
+                                <i class="devicon-wordpress-plain"></i>
+                            </div>
+                            <div class="tech-icon" data-tech="php" data-tooltip="PHP">
+                                <i class="devicon-php-plain"></i>
+                            </div>
+                            <div class="tech-icon" data-tech="javascript" data-tooltip="JavaScript">
+                                <i class="devicon-javascript-plain"></i>
+                            </div>
+                            <div class="tech-icon" data-tech="woocommerce" data-tooltip="WooCommerce">
+                                <i class="devicon-wordpress-plain"></i>
+                            </div>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">Live Demo</a>
-                            <a href="#" class="project-link">GitHub</a>
+                            <a href="https://dentina-dz.com/" class="project-link" target="_blank" rel="noopener noreferrer">See Live</a>
                         </div>
                     </div>
                 </article>
@@ -333,93 +346,69 @@
             </div>
             
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Frontend</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span class="skill-name">React</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="95"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">TypeScript</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Next.js</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">CSS/SCSS</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="95"></div>
-                            </div>
-                        </div>
+                <div class="skill-item" data-skill="React" data-progress="95">
+                    <div class="tech-icon" data-tech="react" data-tooltip="React - 95%">
+                        <i class="devicon-react-original"></i>
                     </div>
                 </div>
-                
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Animation & UX</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span class="skill-name">GSAP</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Framer Motion</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Three.js</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="70"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Accessibility</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
-                        </div>
+                <div class="skill-item" data-skill="TypeScript" data-progress="90">
+                    <div class="tech-icon" data-tech="typescript" data-tooltip="TypeScript - 90%">
+                        <i class="devicon-typescript-plain"></i>
                     </div>
                 </div>
-                
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Tools & Others</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span class="skill-name">Git</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Node.js</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="80"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Figma</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="75"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Testing</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
-                        </div>
+                <div class="skill-item" data-skill="Next.js" data-progress="85">
+                    <div class="tech-icon" data-tech="nextjs" data-tooltip="Next.js - 85%">
+                        <i class="devicon-nextjs-plain"></i>
+                    </div>
+                </div>
+                <div class="skill-item" data-skill="CSS/SCSS" data-progress="95">
+                    <div class="tech-icon" data-tech="scss" data-tooltip="CSS/SCSS - 95%">
+                        <i class="devicon-sass-original"></i>
+                    </div>
+                </div>
+                <div class="skill-item" data-skill="GSAP" data-progress="90">
+                    <div class="tech-icon" data-tech="gsap" data-tooltip="GSAP - 90%">
+                        <i class="devicon-javascript-plain"></i>
+                    </div>
+                </div>
+                <div class="skill-item" data-skill="Framer Motion" data-progress="85">
+                    <div class="tech-icon" data-tech="framer" data-tooltip="Framer Motion - 85%">
+                        <i class="devicon-react-original"></i>
+                    </div>
+                </div>
+                <div class="skill-item" data-skill="Three.js" data-progress="70">
+                    <div class="tech-icon" data-tech="threejs" data-tooltip="Three.js - 70%">
+                        <i class="devicon-javascript-plain"></i>
+                    </div>
+                </div>
+                <div class="skill-item" data-skill="Accessibility" data-progress="90">
+                    <div class="tech-icon" data-tech="accessibility" data-tooltip="Accessibility - 90%">
+                        <i class="devicon-html5-plain"></i>
+                    </div>
+                </div>
+                <div class="skill-item" data-skill="Git" data-progress="90">
+                    <div class="tech-icon" data-tech="git" data-tooltip="Git - 90%">
+                        <i class="devicon-git-plain"></i>
+                    </div>
+                </div>
+                <div class="skill-item" data-skill="Node.js" data-progress="80">
+                    <div class="tech-icon" data-tech="nodejs" data-tooltip="Node.js - 80%">
+                        <i class="devicon-nodejs-plain"></i>
+                    </div>
+                </div>
+                <div class="skill-item" data-skill="Figma" data-progress="75">
+                    <div class="tech-icon" data-tech="figma" data-tooltip="Figma - 75%">
+                        <i class="devicon-figma-plain"></i>
+                    </div>
+                </div>
+                <div class="skill-item" data-skill="Testing" data-progress="85">
+                    <div class="tech-icon" data-tech="testing" data-tooltip="Testing - 85%">
+                        <i class="devicon-jest-plain"></i>
+                    </div>
+                </div>
+                <div class="skill-item" data-skill="WordPress" data-progress="95">
+                    <div class="tech-icon" data-tech="wordpress" data-tooltip="WordPress - 95%">
+                        <i class="devicon-wordpress-plain"></i>
                     </div>
                 </div>
             </div>
@@ -443,22 +432,22 @@
                     </p>
                     
                     <div class="contact-methods">
-                        <a href="mailto:hello@billel.dev" class="contact-method">
+                        <a href="mailto:billal7chami@gmail.com" class="contact-method">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                                 <polyline points="22,6 12,13 2,6"></polyline>
                             </svg>
-                            <span>hello@billel.dev</span>
+                            <span>billal7chami@gmail.com</span>
                         </a>
                         
-                        <a href="https://github.com/billel" class="contact-method">
+                        <a href="https://github.com/bill7pearl" class="contact-method" target="_blank" rel="noopener noreferrer">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                             </svg>
                             <span>GitHub</span>
                         </a>
                         
-                        <a href="https://linkedin.com/in/billel" class="contact-method">
+                        <a href="https://www.linkedin.com/in/billal-chami/" class="contact-method" target="_blank" rel="noopener noreferrer">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                                 <rect x="2" y="9" width="4" height="12"></rect>
