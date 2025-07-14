@@ -1,5 +1,7 @@
 # Modern Portfolio Website
 
+Live link: https://bill7pearl.github.io/portfolio2/
+
 A premium, responsive web developer portfolio website built with vanilla HTML, CSS, and JavaScript. Features modern animations, dark/light mode toggle, and a sleek design inspired by modern portfolios like Brittany Chiang's.
 
 ## ✨ Features
